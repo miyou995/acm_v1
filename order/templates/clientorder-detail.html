@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}
+<title>Commandes</title>
+{% endblock %}
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">
+            Commandes interne
+        </h3>
+    </div> 
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card px-2">
+                <div class="card-body">
+                    <div class="container-fluid">
+                      <img src="{% static 'images/acm.png' %}" style="width:200px; height:80px; float:left;" alt="logo"/>
+                      <h4 class="text-right my-5">{{clientorder.get_order_type_display}}&nbsp;&nbsp;{{clientorder.number}}</h4> 
+                      <p class="text-right my-5">Date : {{clientorder.created}}</p>
+                      <hr>
+                    </div>
+                    <div class="container-fluid d-flex justify-content-between">
+                      <div class="col-lg-3 pl-0">
+                        <p class="mt-5 mb-2"><b>ACM</b></p>
+                        <p>Numéro d'article: 16165484,<br>RC: qefqf4484,<br>Address: Oued Smar, alger, Algérie.</p>
+                      </div>
+                      <div class="col-lg-3 pr-0">
+                        <p class="mt-5 mb-2 text-left"><b>A l'ordre de</b></p>
+                        <p class="text-left">{{clientorder.last_name}}&nbsp;&nbsp;{{clientorder.first_name}}<br>Téléphone: {{clientorder.phone}},<br>E-mail: {{clientorder.email}},<br>Address: {{clientorder.address}}.</p>
+                      </div>
+                    </div>
+                    {% comment %} <div class="container-fluid d-flex justify-content-between">
+                      <div class="col-lg-3 pl-0">
+                        <p class="mb-0 mt-5">Invoice Date : 23rd Jan 2016</p>
+                        <p>Due Date : 25th Jan 2017</p>
+                      </div>
+                    </div> {% endcomment %}
+                    <div class="container-fluid mt-5 d-flex justify-content-center w-100">
+                      <div class="table-responsive w-100">
+                        <h5>Produits acheté :</h5>
+                          <table class="table">
+                            <thead>
+                              <tr class="bg-dark text-white">
+                                  <th>Intitulé</th>
+                                  <th></th>
+                                  <th class="text-right">Quantité</th>
+                                  <th class="text-right">Prix unitaire</th>
+                                  <th class="text-right">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in clientorder.items.all %}
+                              <tr class="text-right">
+                                <td class="text-left">{{item.warehouse_item}}</td>
+                                <td class="text-left"></td>
+                                <td>{{item.quantity}}</td>
+                                <td>{{item.price}} DZD</td>
+                                <td> {{item.get_price}} DZD</td>
+                              </tr>
+                              {% endfor %}  
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
+                    <div class="container-fluid mt-5 w-100">
+                      <p class="text-right mb-2">Total :  DZD</p>
+                      <p class="text-right">Réduction:  DZD</p>
+                      <h5 class="text-right mb-5">Total après réduction: DZD</h5>
+                      <hr>
+                    </div>
+                    <div class="container-fluid w-100">
+                      <a href="{% url 'order:clientorderpdf' clientorder.id %}" class="btn btn-primary float-right mt-4 ml-2"><i class="fa fa-print mr-1"></i>Imprimer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- main-panel ends -->
+</div>
+
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% for order in warehouseorders %}
+<tr>
+    <td>{{order.id}}</td>
+    <td class="py-1">{{order.receiver}}</td>
+    <td>
+        {% if order.is_return %}
+            <label class="badge badge-danger">Retour</label>
+        {% else %}
+            <label class="badge badge-success">commande</label>
+        {% endif %}
+    </td>
+    <td>
+        {{order.get_items_cost}}
+    </td>
+    <td>
+       {{order.created}}
+    </td>
+    <td>
+        <a href="{% url 'order:warehouseorder_detail' order.pk %}">
+            <button class="btn btn-outline-primary btn-sm">Voir</button>
+        </a>
+        <a href="{% url 'order:warehouse_order_edit' order.pk %}">
+            <button class="btn btn-outline-primary btn-sm">Modifier</button>
+        </a>
+    </td>
+</tr>
+{% endfor %}

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}
+<title>Commandes</title>
+{% endblock %}
+ 
+      <div class="content-wrapper">
+          <div class="page-header">
+              <h3 class="page-title">
+                Commandes
+              </h3>
+          </div>
+          <div class="col-12 grid-margin">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Ajout d'un fournisseur</h4>
+                <form action="{% url 'order:addsupplier' %}" method="post"  class="form-sample">
+                    {% csrf_token %}
+                  <p class="card-description">
+                   
+                  </p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="id_name">Nom</label>
+                        <div class="col-sm-9"> 
+                            <input type="text" name="name" class="form-control" maxlength="50" id="id_name">
+                        </div>
+                      </div>
+                    </div>  
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label" for="id_adress">Adresse </label>
+                      <div class="col-sm-9"> 
+                        <input type="text" name="adress" class="form-control" maxlength="50" id="id_adress">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label" for="id_rc_code">Numéro du registre de commerce  </label>
+                      <div class="col-sm-9"> 
+                        <input type="text" name="rc_code" class="form-control" maxlength="25" required="" id="id_rc_code">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label" for="id_art_code">Numéro d'article  </label>
+                      <div class="col-sm-9"> 
+                        <input type="email" name="art_code" class="form-control" maxlength="254" id="id_art_code">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <label class="col-sm-3 col-form-label" for="id_nif_code">Numéro identité fiscale </label>
+                      <div class="col-sm-9"> 
+                        <input type="text" name="nif_code" class="form-control" maxlength="2" id="id_nif_code">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+                      <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                </div>
+            </form>
+        </div>
+    <!-- main-panel ends -->
+  </div>
+
+  {% endblock content %}
+

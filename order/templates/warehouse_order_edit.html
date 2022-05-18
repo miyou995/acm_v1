@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}
+<title>Commandes</title>
+{% endblock %}
+ 
+      <div class="content-wrapper">
+          <div class="page-header">
+              <h3 class="page-title">
+                Commandes
+              </h3>
+          </div>
+          <div class="col-12 grid-margin">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Modification d'une commande interne</h4>
+                <form action="{% url 'order:warehouse_order_create' %}" method="post"  class="form-sample">
+                    {% csrf_token %}
+                  <p class="card-description">
+                  </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label" for="id_name">Recepteur</label>
+                                <div class="col-sm-9">
+                                    <select name="receiver" class="form-control">
+                                        <option>Selectionner un recepteur</option>
+                                        {% for receiver in receivers %}
+                                            <option  value="{{receiver.id}}">{{receiver.name}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group form-check form-check-primary">
+                                <label class="form-check-label" for="id_is_return"> 
+                                    Retour
+                                    <input type="checkbox" class="form-check-input" name="is_return" id="id_is_return" > 
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <div class="col-sm-4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!--table -->
+                <div class="row">
+                    <div class="col-12 grid-margin">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex justify-content-between align-items-center">
+                                    <table >
+                                    <thead>
+                                        <tr role="row">
+                                            <th style="width:400px;" for="id_items-{{forloop.counter0}}-warehouse_item">Produit </th>                                           
+                                            <th style="width:400px;" for="id_items-{{forloop.counter0}}-quantity">Quantité</th>
+                                            <th style="width:400px; padding:10px;" for="id_items-{{forloop.counter0}}-DELETE"><i class="fas fa-trash"></i></th> 
+                                            <th style="width:100px;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="form-container" > 
+                                    {{ formset.management_form }}
+                                    {% for form in formset %}
+                                            <tr class="item-form ">
+                                        <td >
+                                            <select name="items-{{forloop.counter0}}-warehouse_item" class="form-control" id="id_items-{{forloop.counter0}}-warehouse_item" required>
+                                                <option>Selectionner un Produit</option>
+                                                {% for product in products %}
+                                                <option value="{{product.id}}">{{product}}</option>
+                                                {% endfor %}
+                                            </select> 
+                                        </td>
+                                        <td >
+                                            <input type="number" name="items-{{forloop.counter0}}-quantity"class="form-control" id="id_items-{{forloop.counter0}}-quantity">
+                                        <td  style=" padding:10px">
+                                            <input type="checkbox" name="items-{{forloop.counter0}}-DELETE" id="id_items-{{forloop.counter0}}-DELETE">
+                                        </td>
+                                        <td></td>
+                                 
+                                    </tr>   
+                                    {% endfor %}
+                                    </tbody>
+                                   
+                            </table>
+                            
+                                <button type="submit" id="add-form" class="btn btn-primary mr-2" style="right:50px"> + </button> 
+                           
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{% url 'order:warehouse_order_create' %}"> <button type="submit" class="btn btn-primary mr-2">Submit</button> </a>
+                </div>
+            </form>
+        </div>
+    <!-- main-panel ends -->
+  </div>
+
+  {% endblock content %}
+
+  {% block extrasj %}
+  <script>
+      var itemForm = document.querySelectorAll(".item-form")
+      var container = document.querySelector("#form-container") 
+      let addButton = document.querySelector("#add-form")
+      var totalForms = document.querySelector("#id_items-TOTAL_FORMS")
+  
+      let formNum = itemForm.length-1
+      addButton.addEventListener('click', addForm)
+      console.log('yeess')
+  
+      function addForm(e){
+          console.log('iniiiiiiit')
+          e.preventDefault()
+          let newForm = itemForm[0].cloneNode(true)
+          let formRegex = RegExp(`items-(\\d){1}-`,'g')
+          formNum++
+          newForm.innerHTML = newForm.innerHTML.replace(formRegex, `items-${formNum}-`)
+          container.append(newForm) 
+          totalForms.setAttribute('value', `${formNum+1}`)
+      }
+     
+  </script>
+  {% endblock extrasj %}

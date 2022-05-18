@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}
+<title>Commandes</title>
+{% endblock %}
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">
+            Commandes interne | Liste Des Bons De Commande
+        </h3>
+    </div> 
+    <div class="col-md-6 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-0">Total</h4>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-inline-block pt-3">
+                        <div class="d-md-flex">
+                            <h2 class="mb-0"> {{ warehouseorders.count }} </h2>
+                        </div>
+                    </div>
+                    <div class="d-inline-block">
+                        <i class=" fas fa-dolly-flatbed text-info icon-lg"></i>                                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-md-flex justify-content-between align-items-center">
+                        <form id="filterForm" hx-get="{% url 'order:htmx_order_bc_list' %}" hx-target="#wareHouseOrders" hx-swap="innerHTML" hx-trigger="change">
+                            <div class="row">
+                                <div class="col- col-md-3" >
+                                    <input type="text" id="receiverInput" hx-trigger="changed"  name="receiver" class="form-control" placeholder="recepteur"></div>
+                                <div class="col- col-md-3">
+                                    <input type="date" name="start_date" class="form-control"  placeholder="date debut"></div>
+                                <div class="col- col-md-3">
+                                    <input type="date" name="end_date" class="form-control"  placeholder="date fin">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+              <h4 class="card-title">Listes des bons de commandes</h4>
+              <div>
+                  <a href="{% url 'order:warehouse_order_create' %}"> <button type="submit" class="btn btn-primary mr-2" style="float:right;">+ Commande</button><a>
+              </div>
+            <div class="col-sm-12 col-md-6"><div id="order-listing_filter" class="dataTables_filter"><label><input type="search" class="form-control" placeholder="Rechercher" aria-controls="order-listing"></label></div></div>
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th> #</th>
+                        <th>Récépteur / revendeur</th>
+                        <th>Type</th>
+                        <th>Total</th>
+                        <th>Création</th>
+                        <th >Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="wareHouseOrders">
+                    {% include 'snippets/warehouse_order_list_block.html' %}
+                </tbody>
+              </table>
+              <nav class="col-12" aria-label="Page navigation">
+                <ul class="pagination mt-5">
+                  <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                  <li class="page-item  active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+{% endblock content %}

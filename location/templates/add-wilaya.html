@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}
+<title>wilaya</title>
+{% endblock %}
+<!-- Main Wrapper -->
+<div class="main-wrapper">
+<!-- Page Wrapper -->
+<div class="page-wrapper bg-white">
+    <div class="content container-fluid bg-white">
+    
+        <!-- Page Header -->
+        <div class="page-header bg-white">
+            <div class="row bg-white">
+                <div class="col-sm-12 bg-white">
+                    <h3 class="page-title  bg-white">wilaya</h3>
+                </div>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-sm-12">
+                    <!-- Project Settings Form -->
+                    <form action="{% url 'order:addwilaya' %}" method="post">
+                        {% csrf_token %}
+                        <div class="row form-row">
+                            <div class="col-12 col-md-12">
+                                <div class="form-group">
+                                   
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group ">
+                                    <label for="id_name">Nom: </label>
+                                    <input type="text" name="name"  id="id_name"  required="" class="form-control bg-white">
+                                </div>
+                            </div>
+                            
+                        </div> 
+                        <div class="col-12 col-md-6">
+                            <div class="form-group ">
+                                <label for="id_name">Livraison point de Relais: </label>
+                                <input type="number" name="relai_delivery" value="0" step="0.01" required="" id="id_relai_delivery" class="form-control bg-white">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group ">
+                                <label for="id_name">Livraison à domicile:</label>
+                                <input type="number" name="home_delivery" value="0" step="0.01" required="" id="id_home_delivery" class="form-control bg-white">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <div>
+                                    <input type="checkbox" name="active" id="id_active" checked="" class=" bg-white">
+                                    <label  for="id_actif">Livraiseon Active: </label> 
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                       
+                        </div>           
+                        <br>  <br>
+                        <div> 
+                             <input type="submit" value="Save" class="btnn" name="_save">
+                        </div>
+                        <br>  <br>
+                    </form>
+                    <!-- /Poject Settings Form -->
+                  
+            </div>			
+        </div>
+        
+    </div>			
+</div>
+<br>
+<!-- /Page Wrapper -->
+
+</div>
+
+<!-- /Main Wrapper -->
+{% endblock content %}

@@ -1,0 +1,93 @@
+{% load static %}
+{% block content %}
+{% block title %}
+<title>Commandes</title>
+{% endblock %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Stock</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/iconfonts/font-awesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.addons.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
+</head>
+ 
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card px-2">
+                <div class="card-body">
+                    <div class="container-fluid">
+                      <img src="{% static 'images/acm.png' %}" style="width:200px; height:80px; float:left;" alt="logo"/>
+                      <h4 class="text-right my-5">{{supplyorder.get_supply_type_display}}&nbsp;&nbsp;{{supplyorder.number}}</h4> 
+                      <p class="text-right my-5">Date : {{supplyorder.created}}</p>
+                      <hr>
+                    </div>
+                    <div class="container-fluid d-flex justify-content-between">
+                      <div class="col-lg-3 pl-0">
+                        <p class="mt-5 mb-2"><b>ACM</b></p>
+                        <p>Numéro d'article: 16165484,<br>RC: qefqf4484,<br>Address: Oued Smar, alger, Algérie.</p>
+                      </div>
+                      <div class="col-lg-3 pr-0">
+                        <p class="mt-5 mb-2 text-left"><b>A l'ordre de</b></p>
+                        <p class="text-left">{{supplyorder.supplier}}<br>RC: {{supplyorder.supplier.rc_code}},<br>NIF: {{supplyorder.supplier.nif_code}},<br>NIS: {{supplyorder.supplier.nis_code}},<br>Numéro d'article: {{supplyorder.supplier.art_code}},<br>Address: {{supplyorder.supplier.adress}}.</p>
+                      </div>
+                    </div>
+                    {% comment %} <div class="container-fluid d-flex justify-content-between">
+                      <div class="col-lg-3 pl-0">
+                        <p class="mb-0 mt-5">Invoice Date : 23rd Jan 2016</p>
+                        <p>Due Date : 25th Jan 2017</p>
+                      </div>
+                    </div> {% endcomment %}
+                    <div class="container-fluid mt-5 d-flex justify-content-center w-100">
+                      <div class="table-responsive w-100">
+                        <h5>Produits acheté :</h5>
+                          <table class="table">
+                            <thead>
+                              <tr class="bg-dark text-white">
+                                  <th>Intitulé</th>
+                                  <th></th>
+                                  <th class="text-right">Quantité</th>
+                                  <th class="text-right">Prix unitaire</th>
+                                  <th class="text-right">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in supplyorder.items.all %}
+                              <tr class="text-right">
+                                <td class="text-left">{{item.warehouse_item}}</td>
+                                <td class="text-left"></td>
+                                <td>{{item.quantity}}</td>
+                                <td>{{item.price}} DZD</td>
+                                <td> {{item.get_price}} DZD</td>
+                              </tr>
+                              {% endfor %}  
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
+                    <div class="container-fluid mt-5 w-100">
+                      <p class="text-right mb-2">Total :  DZD</p>
+                      <p class="text-right">Réduction:  DZD</p>
+                      <h5 class="text-right mb-5">Total après réduction: DZD</h5>
+                      <hr>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- main-panel ends -->
+</div>
+
+{% endblock content %}

@@ -1,0 +1,2072 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2022-04-21T14:19:41.459",
+        "user": 1,
+        "content_type": 20,
+        "object_id": "1",
+        "object_repr": "Blida",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2022-04-21T14:19:51.776",
+        "user": 1,
+        "content_type": 21,
+        "object_id": "1",
+        "object_repr": "Boufarik",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2022-04-21T14:19:58.257",
+        "user": 1,
+        "content_type": 21,
+        "object_id": "2",
+        "object_repr": "Birtouta",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2022-04-21T14:20:03.955",
+        "user": 1,
+        "content_type": 21,
+        "object_id": "3",
+        "object_repr": "Blida",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2022-04-21T14:20:08.819",
+        "user": 1,
+        "content_type": 21,
+        "object_id": "4",
+        "object_repr": "Beni tamou",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2022-04-21T14:21:58.055",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "2",
+        "object_repr": "1@warehouse.com",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2022-04-21T14:22:15.302",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "2",
+        "object_repr": "1@warehouse.com",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Warehouse\", \"Is active\", \"Is manager\", \"Last login\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2022-04-21T14:22:37.935",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "3",
+        "object_repr": "ouedsemmar@warehouse.com",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2022-04-21T14:23:35.985",
+        "user": 1,
+        "content_type": 18,
+        "object_id": "5",
+        "object_repr": "chlef",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"D\\u00e9pot principale\"]}}]"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add site",
+        "content_type": 6,
+        "codename": "add_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change site",
+        "content_type": 6,
+        "codename": "change_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete site",
+        "content_type": 6,
+        "codename": "delete_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view site",
+        "content_type": 6,
+        "codename": "view_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add ClientOrder",
+        "content_type": 7,
+        "codename": "add_clientorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change ClientOrder",
+        "content_type": 7,
+        "codename": "change_clientorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete ClientOrder",
+        "content_type": 7,
+        "codename": "delete_clientorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view ClientOrder",
+        "content_type": 7,
+        "codename": "view_clientorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add supplier",
+        "content_type": 8,
+        "codename": "add_supplier"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change supplier",
+        "content_type": 8,
+        "codename": "change_supplier"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete supplier",
+        "content_type": 8,
+        "codename": "delete_supplier"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view supplier",
+        "content_type": 8,
+        "codename": "view_supplier"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add supply_order",
+        "content_type": 9,
+        "codename": "add_supplyorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change supply_order",
+        "content_type": 9,
+        "codename": "change_supplyorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete supply_order",
+        "content_type": 9,
+        "codename": "delete_supplyorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view supply_order",
+        "content_type": 9,
+        "codename": "view_supplyorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add warehouseorder",
+        "content_type": 10,
+        "codename": "add_warehouseorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change warehouseorder",
+        "content_type": 10,
+        "codename": "change_warehouseorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete warehouseorder",
+        "content_type": 10,
+        "codename": "delete_warehouseorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view warehouseorder",
+        "content_type": 10,
+        "codename": "view_warehouseorder"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add ware house order item",
+        "content_type": 11,
+        "codename": "add_warehouseorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change ware house order item",
+        "content_type": 11,
+        "codename": "change_warehouseorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete ware house order item",
+        "content_type": 11,
+        "codename": "delete_warehouseorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view ware house order item",
+        "content_type": 11,
+        "codename": "view_warehouseorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add supply order item",
+        "content_type": 12,
+        "codename": "add_supplyorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change supply order item",
+        "content_type": 12,
+        "codename": "change_supplyorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete supply order item",
+        "content_type": 12,
+        "codename": "delete_supplyorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view supply order item",
+        "content_type": 12,
+        "codename": "view_supplyorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add client order item",
+        "content_type": 13,
+        "codename": "add_clientorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change client order item",
+        "content_type": 13,
+        "codename": "change_clientorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete client order item",
+        "content_type": 13,
+        "codename": "delete_clientorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view client order item",
+        "content_type": 13,
+        "codename": "view_clientorderitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 14,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 14,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 14,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 14,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add Brand",
+        "content_type": 15,
+        "codename": "add_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change Brand",
+        "content_type": 15,
+        "codename": "change_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete Brand",
+        "content_type": 15,
+        "codename": "delete_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view Brand",
+        "content_type": 15,
+        "codename": "view_brand"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add Category",
+        "content_type": 16,
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change Category",
+        "content_type": 16,
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete Category",
+        "content_type": 16,
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view Category",
+        "content_type": 16,
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add Product",
+        "content_type": 17,
+        "codename": "add_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change Product",
+        "content_type": 17,
+        "codename": "change_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete Product",
+        "content_type": 17,
+        "codename": "delete_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view Product",
+        "content_type": 17,
+        "codename": "view_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add WareHouse",
+        "content_type": 18,
+        "codename": "add_warehouse"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change WareHouse",
+        "content_type": 18,
+        "codename": "change_warehouse"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete WareHouse",
+        "content_type": 18,
+        "codename": "delete_warehouse"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view WareHouse",
+        "content_type": 18,
+        "codename": "view_warehouse"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add WareHouseItem",
+        "content_type": 19,
+        "codename": "add_warehouseitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change WareHouseItem",
+        "content_type": 19,
+        "codename": "change_warehouseitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete WareHouseItem",
+        "content_type": 19,
+        "codename": "delete_warehouseitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can view WareHouseItem",
+        "content_type": 19,
+        "codename": "view_warehouseitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can add Wilaya",
+        "content_type": 20,
+        "codename": "add_wilaya"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can change Wilaya",
+        "content_type": 20,
+        "codename": "change_wilaya"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can delete Wilaya",
+        "content_type": 20,
+        "codename": "delete_wilaya"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can view Wilaya",
+        "content_type": 20,
+        "codename": "view_wilaya"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+        "name": "Can add Commune",
+        "content_type": 21,
+        "codename": "add_commune"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+        "name": "Can change Commune",
+        "content_type": 21,
+        "codename": "change_commune"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+        "name": "Can delete Commune",
+        "content_type": 21,
+        "codename": "delete_commune"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+        "name": "Can view Commune",
+        "content_type": 21,
+        "codename": "view_commune"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "0zhfz2hjhv6u0aubtf2v65n83wq0w9c2",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSHAlJdL934DGRiQqoGktCvjv2uTLnR7zzn3xQJuaw3byEuYiZ2ZZKffLWJ65LYDumO7dZ56W5c58l3hBx382ik_L4f7d1Bx1G8NQisljSQnsiYL4IqxmkTx4KWlyaDTSF4AeFCeSlRWxiQxa6vQT5m9P6xhNuk:1nhXck:u2g_aQjvpmhuzi_JhbRfGfupW35T2Jrs9s-hvs4yJeU",
+        "expire_date": "2022-05-05T14:17:34.164"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "sco4xnmk3hcmn839zejkbzu7dob1oz3b",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSHAlJdL934DGRiQqoGktCvjv2uTLnR7zzn3xQJuaw3byEuYiZ2ZZKffLWJ65LYDumO7dZ56W5c58l3hBx382ik_L4f7d1Bx1G8NQisljSQnsiYL4IqxmkTx4KWlyaDTSF4AeFCeSlRWxiQxa6vQT5m9P6xhNuk:1nix9L:IHgE-uTPQwny2jaiY018AyQBQfVlVX_Zbldt70BgL0o",
+        "expire_date": "2022-05-09T11:45:03.553"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vi9esbbs6ma5atpj4liajrayf1mjcvcu",
+    "fields": {
+        "session_data": ".eJxVjMsOwiAQRf-FtSHAlJdL934DGRiQqoGktCvjv2uTLnR7zzn3xQJuaw3byEuYiZ2ZZKffLWJ65LYDumO7dZ56W5c58l3hBx382ik_L4f7d1Bx1G8NQisljSQnsiYL4IqxmkTx4KWlyaDTSF4AeFCeSlRWxiQxa6vQT5m9P6xhNuk:1nqUwy:2iiF7tT2pTEYR1IeVd9d77z5h3jP6kNT2oQTom-SPQ4",
+        "expire_date": "2022-05-30T08:15:28.518"
+    }
+},
+{
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+    }
+},
+{
+    "model": "order.warehouseorder",
+    "pk": 1,
+    "fields": {
+        "receiver": 2,
+        "delivery_man": null,
+        "order_type": "BC",
+        "number": null,
+        "is_confirmed": false,
+        "is_paid": false,
+        "is_delivered": false,
+        "is_return": false,
+        "discount": null,
+        "delivery_cost": null,
+        "note": "",
+        "created_by": null,
+        "updated_by": null,
+        "created": "2022-04-20T14:23:45.921",
+        "updated": "2022-04-20T14:23:45.921"
+    }
+},
+{
+    "model": "order.warehouseorder",
+    "pk": 2,
+    "fields": {
+        "receiver": 2,
+        "delivery_man": null,
+        "order_type": "BC",
+        "number": null,
+        "is_confirmed": false,
+        "is_paid": false,
+        "is_delivered": false,
+        "is_return": false,
+        "discount": null,
+        "delivery_cost": null,
+        "note": "",
+        "created_by": null,
+        "updated_by": null,
+        "created": "2022-04-13T14:26:44.740",
+        "updated": "2022-04-19T14:26:44.740"
+    }
+},
+{
+    "model": "order.warehouseorder",
+    "pk": 3,
+    "fields": {
+        "receiver": 1,
+        "delivery_man": null,
+        "order_type": "BC",
+        "number": null,
+        "is_confirmed": false,
+        "is_paid": false,
+        "is_delivered": false,
+        "is_return": true,
+        "discount": null,
+        "delivery_cost": null,
+        "note": "",
+        "created_by": null,
+        "updated_by": null,
+        "created": "2022-04-10T14:34:51.905",
+        "updated": "2022-04-21T14:34:51.905"
+    }
+},
+{
+    "model": "order.warehouseorder",
+    "pk": 4,
+    "fields": {
+        "receiver": 1,
+        "delivery_man": null,
+        "order_type": "BC",
+        "number": null,
+        "is_confirmed": false,
+        "is_paid": false,
+        "is_delivered": false,
+        "is_return": false,
+        "discount": null,
+        "delivery_cost": null,
+        "note": "",
+        "created_by": null,
+        "updated_by": null,
+        "created": "2022-04-21T14:35:03.746",
+        "updated": "2022-04-21T14:35:03.746"
+    }
+},
+{
+    "model": "order.warehouseorder",
+    "pk": 5,
+    "fields": {
+        "receiver": 1,
+        "delivery_man": null,
+        "order_type": "BC",
+        "number": null,
+        "is_confirmed": false,
+        "is_paid": false,
+        "is_delivered": false,
+        "is_return": false,
+        "discount": null,
+        "delivery_cost": null,
+        "note": "",
+        "created_by": null,
+        "updated_by": null,
+        "created": "2022-04-21T14:45:11.539",
+        "updated": "2022-04-21T14:45:11.539"
+    }
+},
+{
+    "model": "order.warehouseorder",
+    "pk": 6,
+    "fields": {
+        "receiver": 1,
+        "delivery_man": null,
+        "order_type": "BC",
+        "number": null,
+        "is_confirmed": false,
+        "is_paid": false,
+        "is_delivered": false,
+        "is_return": false,
+        "discount": null,
+        "delivery_cost": null,
+        "note": "",
+        "created_by": null,
+        "updated_by": null,
+        "created": "2022-05-16T10:51:53.656",
+        "updated": "2022-05-16T10:51:53.656"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 1,
+    "fields": {
+        "order": 1,
+        "warehouse_item": 12,
+        "quantity": 3,
+        "price": "80000.00",
+        "created": "2022-04-21T14:23:45.963",
+        "updated": "2022-04-21T14:23:45.963"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 2,
+    "fields": {
+        "order": 2,
+        "warehouse_item": 20,
+        "quantity": 9,
+        "price": "80000.00",
+        "created": "2022-04-21T14:26:44.768",
+        "updated": "2022-04-21T14:26:44.768"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 3,
+    "fields": {
+        "order": 3,
+        "warehouse_item": 24,
+        "quantity": 9,
+        "price": "35000.00",
+        "created": "2022-04-21T14:34:51.919",
+        "updated": "2022-04-21T14:34:51.919"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 4,
+    "fields": {
+        "order": 3,
+        "warehouse_item": 20,
+        "quantity": 6,
+        "price": "80000.00",
+        "created": "2022-04-21T14:34:51.933",
+        "updated": "2022-04-21T14:34:51.933"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 5,
+    "fields": {
+        "order": 4,
+        "warehouse_item": 12,
+        "quantity": 4,
+        "price": "80000.00",
+        "created": "2022-04-21T14:35:03.761",
+        "updated": "2022-04-21T14:35:03.761"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 6,
+    "fields": {
+        "order": 5,
+        "warehouse_item": 12,
+        "quantity": 2,
+        "price": "80000.00",
+        "created": "2022-04-21T14:45:11.564",
+        "updated": "2022-04-21T14:45:11.564"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 7,
+    "fields": {
+        "order": 5,
+        "warehouse_item": 20,
+        "quantity": 2,
+        "price": "80000.00",
+        "created": "2022-04-21T14:45:11.579",
+        "updated": "2022-04-21T14:45:11.579"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 8,
+    "fields": {
+        "order": 5,
+        "warehouse_item": 16,
+        "quantity": 3,
+        "price": "40000.00",
+        "created": "2022-04-21T14:45:11.597",
+        "updated": "2022-04-21T14:45:11.597"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 9,
+    "fields": {
+        "order": 5,
+        "warehouse_item": 24,
+        "quantity": 5,
+        "price": "35000.00",
+        "created": "2022-04-21T14:45:11.618",
+        "updated": "2022-04-21T14:45:11.618"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 10,
+    "fields": {
+        "order": 5,
+        "warehouse_item": 28,
+        "quantity": 3,
+        "price": "80000.00",
+        "created": "2022-04-21T14:45:11.695",
+        "updated": "2022-04-21T14:45:11.695"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 11,
+    "fields": {
+        "order": 5,
+        "warehouse_item": 40,
+        "quantity": 1,
+        "price": "80000.00",
+        "created": "2022-04-21T14:45:11.715",
+        "updated": "2022-04-21T14:45:11.715"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 12,
+    "fields": {
+        "order": 6,
+        "warehouse_item": 24,
+        "quantity": 2,
+        "price": "35000.00",
+        "created": "2022-05-16T10:51:53.670",
+        "updated": "2022-05-16T10:51:53.670"
+    }
+},
+{
+    "model": "order.warehouseorderitem",
+    "pk": 13,
+    "fields": {
+        "order": 6,
+        "warehouse_item": 32,
+        "quantity": 6,
+        "price": "60000.00",
+        "created": "2022-05-16T10:51:53.684",
+        "updated": "2022-05-16T10:51:53.684"
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$su7jobWc8yLklVR5DS5iZt$JgPas2Iz2VrzGDBK6thACyhSaH0eHlAGlj7GngkCHfg=",
+        "last_login": "2022-05-16T08:15:28.512",
+        "is_superuser": true,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": true,
+        "date_joined": "2022-04-21T14:04:18.821",
+        "email": "admin@admin.com",
+        "picture": "",
+        "pseudo": null,
+        "role": null,
+        "notes": null,
+        "warehouse": null,
+        "is_active": true,
+        "is_manager": false,
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$DnABzkzMOfmLvlAVF18HAk$fPQz6q5Md9NDPo3U/cDswK3FXdxssrzVBY9q29G/xIY=",
+        "last_login": "2022-04-21T14:22:13",
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "date_joined": "2022-04-21T14:21:57",
+        "email": "1@warehouse.com",
+        "picture": "",
+        "pseudo": null,
+        "role": null,
+        "notes": "",
+        "warehouse": 1,
+        "is_active": true,
+        "is_manager": true,
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$wMgWG65yj0xVuRU2NfZCdN$axYD/jsI1wEY6EBXpUJPkk9ZbV5FkYTLga38epI4JWo=",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "date_joined": "2022-04-21T14:22:37.764",
+        "email": "ouedsemmar@warehouse.com",
+        "picture": "",
+        "pseudo": null,
+        "role": null,
+        "notes": null,
+        "warehouse": null,
+        "is_active": false,
+        "is_manager": false,
+        "is_admin": false,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 1,
+    "fields": {
+        "name": "brandt",
+        "actif": true
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 2,
+    "fields": {
+        "name": "samsung",
+        "actif": true
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 3,
+    "fields": {
+        "name": "telestar",
+        "actif": true
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 4,
+    "fields": {
+        "name": "oppo",
+        "actif": true
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 5,
+    "fields": {
+        "name": "SEB",
+        "actif": true
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 1,
+    "fields": {
+        "name": "t�l�phonie",
+        "slug": "telephonie",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_DZB0FrR_8IP603R_xaiuGZl.png",
+        "parent": null,
+        "lft": 1,
+        "rght": 8,
+        "tree_id": 1,
+        "level": 0
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 2,
+    "fields": {
+        "name": "smartphone",
+        "slug": "smartphone",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_DZB0FrR.png",
+        "parent": 1,
+        "lft": 2,
+        "rght": 5,
+        "tree_id": 1,
+        "level": 1
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 3,
+    "fields": {
+        "name": "tablette",
+        "slug": "tablette",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_DZB0FrR_ZCQofoY.png",
+        "parent": 2,
+        "lft": 3,
+        "rght": 4,
+        "tree_id": 1,
+        "level": 2
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 4,
+    "fields": {
+        "name": "telephone GSM",
+        "slug": "telephone-gsm",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_H8AW4Lv.png",
+        "parent": 1,
+        "lft": 6,
+        "rght": 7,
+        "tree_id": 1,
+        "level": 1
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 5,
+    "fields": {
+        "name": "electromenager",
+        "slug": "electromenager",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_DZB0FrR_8IP603R.png",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 2,
+        "level": 0
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 6,
+    "fields": {
+        "name": "informatique",
+        "slug": "informatique",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_H8AW4Lv_caFaFZU.png",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 3,
+        "level": 0
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 7,
+    "fields": {
+        "name": "meubles",
+        "slug": "meubles",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_H8AW4Lv_3HCe4p0.png",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 4,
+        "level": 0
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 2,
+    "fields": {
+        "name": "machine � laver",
+        "upc": "123456",
+        "slug": "machine-a-laver",
+        "reference": "123456d",
+        "category": 2,
+        "brand": 2,
+        "text": "machine blanche",
+        "price": "50000",
+        "old_price": null,
+        "buy_price": "50000",
+        "actif": false,
+        "new": false,
+        "created": "2022-03-30T08:49:07.724",
+        "updated": "2022-04-21T14:07:16.155"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 4,
+    "fields": {
+        "name": "TV",
+        "upc": "6564162",
+        "slug": "tv",
+        "reference": "65641625151",
+        "category": 5,
+        "brand": 2,
+        "text": "silver",
+        "price": "80000",
+        "old_price": null,
+        "buy_price": "75000",
+        "actif": true,
+        "new": true,
+        "created": "2022-03-30T15:32:43.486",
+        "updated": "2022-04-21T14:07:16.157"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 5,
+    "fields": {
+        "name": "reno6",
+        "upc": "sm457855",
+        "slug": "reno6",
+        "reference": "sm457855j",
+        "category": 3,
+        "brand": 4,
+        "text": "bleu",
+        "price": "40000",
+        "old_price": null,
+        "buy_price": "35000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-03T12:19:14.150",
+        "updated": "2022-04-21T14:07:16.158"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 6,
+    "fields": {
+        "name": "lave vaisselle",
+        "upc": "1245879s",
+        "slug": "lave-vaisselle",
+        "reference": "25879631s",
+        "category": 5,
+        "brand": 2,
+        "text": "lave-vaisselle encastrable 60 cm",
+        "price": "80000",
+        "old_price": null,
+        "buy_price": "75000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T09:22:45.659",
+        "updated": "2022-04-21T14:07:16.159"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 7,
+    "fields": {
+        "name": "machine � caf�",
+        "upc": "zeadqda6984",
+        "slug": "machine-a-cafe",
+        "reference": "kjojc85qds",
+        "category": 5,
+        "brand": 2,
+        "text": "couleur rouge",
+        "price": "35000",
+        "old_price": null,
+        "buy_price": "30000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T10:16:05.037",
+        "updated": "2022-04-21T14:07:16.161"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 8,
+    "fields": {
+        "name": "A51",
+        "upc": "sqdqda45",
+        "slug": "a51",
+        "reference": "5zdada",
+        "category": 1,
+        "brand": 2,
+        "text": "couleur bleu",
+        "price": "80000",
+        "old_price": null,
+        "buy_price": "75000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T10:18:05.418",
+        "updated": "2022-04-21T14:07:16.162"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 9,
+    "fields": {
+        "name": "A50",
+        "upc": "nldzze�fz57",
+        "slug": "a50",
+        "reference": "lknefkl55555",
+        "category": 1,
+        "brand": 2,
+        "text": "couleur blanc",
+        "price": "60000",
+        "old_price": null,
+        "buy_price": "55000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T10:21:58.387",
+        "updated": "2022-04-21T14:07:16.163"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 10,
+    "fields": {
+        "name": "A94",
+        "upc": "fnijr4545",
+        "slug": "a94",
+        "reference": "dfz484894",
+        "category": 2,
+        "brand": 4,
+        "text": "couleur vert",
+        "price": "70000",
+        "old_price": null,
+        "buy_price": "65000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T10:39:57.259",
+        "updated": "2022-04-21T14:07:16.165"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 11,
+    "fields": {
+        "name": "cuiseur vapeur",
+        "upc": "498415da",
+        "slug": "cuiseur-vapeur",
+        "reference": "56498498/74ds",
+        "category": 5,
+        "brand": 5,
+        "text": "couleur blanc",
+        "price": "80000",
+        "old_price": null,
+        "buy_price": "75000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T12:40:16.650",
+        "updated": "2022-04-21T14:07:16.167"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 12,
+    "fields": {
+        "name": "test",
+        "upc": "151654",
+        "slug": "test",
+        "reference": null,
+        "category": null,
+        "brand": null,
+        "text": "",
+        "price": "0",
+        "old_price": null,
+        "buy_price": null,
+        "actif": true,
+        "new": false,
+        "created": "2022-04-21T13:10:23.560",
+        "updated": "2022-04-21T14:07:16.169"
+    }
+},
+{
+    "model": "inventory.warehouse",
+    "pk": 1,
+    "fields": {
+        "name": "Oued smar",
+        "address": "alger, alger",
+        "actif": true,
+        "is_default": false,
+        "commune": null,
+        "created": "2022-03-27T16:27:48.998",
+        "updated": "2022-04-03T12:19:50.615"
+    }
+},
+{
+    "model": "inventory.warehouse",
+    "pk": 2,
+    "fields": {
+        "name": "medea",
+        "address": "medea,medea",
+        "actif": true,
+        "is_default": false,
+        "commune": null,
+        "created": "2022-03-27T16:28:13.656",
+        "updated": "2022-03-27T17:55:13.434"
+    }
+},
+{
+    "model": "inventory.warehouse",
+    "pk": 4,
+    "fields": {
+        "name": "Djelfa",
+        "address": "djelfa, algerie",
+        "actif": false,
+        "is_default": false,
+        "commune": null,
+        "created": "2022-03-30T11:19:18.373",
+        "updated": "2022-03-30T11:19:18.373"
+    }
+},
+{
+    "model": "inventory.warehouse",
+    "pk": 5,
+    "fields": {
+        "name": "chlef",
+        "address": "chef,algerie",
+        "actif": false,
+        "is_default": true,
+        "commune": null,
+        "created": "2022-03-30T11:21:46.642",
+        "updated": "2022-04-21T14:23:35.976"
+    }
+},
+{
+    "model": "inventory.warehouse",
+    "pk": 6,
+    "fields": {
+        "name": "Blida",
+        "address": "Blida blida",
+        "actif": false,
+        "is_default": false,
+        "commune": 1,
+        "created": "2022-04-21T14:20:20.937",
+        "updated": "2022-04-21T14:20:20.937"
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 3,
+    "fields": {
+        "product": 2,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 4,
+    "fields": {
+        "product": 2,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 8,
+    "fields": {
+        "product": 4,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 9,
+    "fields": {
+        "product": 4,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 11,
+    "fields": {
+        "product": 4,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 12,
+    "fields": {
+        "product": 4,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 13,
+    "fields": {
+        "product": 5,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 14,
+    "fields": {
+        "product": 5,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 15,
+    "fields": {
+        "product": 5,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 16,
+    "fields": {
+        "product": 5,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 17,
+    "fields": {
+        "product": 6,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 18,
+    "fields": {
+        "product": 6,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 19,
+    "fields": {
+        "product": 6,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 20,
+    "fields": {
+        "product": 6,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 21,
+    "fields": {
+        "product": 7,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 22,
+    "fields": {
+        "product": 7,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 23,
+    "fields": {
+        "product": 7,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 24,
+    "fields": {
+        "product": 7,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 25,
+    "fields": {
+        "product": 8,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 26,
+    "fields": {
+        "product": 8,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 27,
+    "fields": {
+        "product": 8,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 28,
+    "fields": {
+        "product": 8,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 29,
+    "fields": {
+        "product": 9,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 30,
+    "fields": {
+        "product": 9,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 31,
+    "fields": {
+        "product": 9,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 32,
+    "fields": {
+        "product": 9,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 33,
+    "fields": {
+        "product": 10,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 34,
+    "fields": {
+        "product": 10,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 35,
+    "fields": {
+        "product": 10,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 36,
+    "fields": {
+        "product": 10,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 37,
+    "fields": {
+        "product": 11,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 38,
+    "fields": {
+        "product": 11,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 39,
+    "fields": {
+        "product": 11,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 40,
+    "fields": {
+        "product": 11,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 41,
+    "fields": {
+        "product": 12,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 42,
+    "fields": {
+        "product": 12,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 43,
+    "fields": {
+        "product": 12,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 44,
+    "fields": {
+        "product": 12,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "location.wilaya",
+    "pk": 1,
+    "fields": {
+        "name": "Blida",
+        "relai_delivery": "0.00",
+        "home_delivery": "0.00",
+        "active": true,
+        "created": "2022-04-21T14:19:41.446",
+        "updated": "2022-04-21T14:19:41.446"
+    }
+},
+{
+    "model": "location.commune",
+    "pk": 1,
+    "fields": {
+        "wilaya": 1,
+        "name": "Boufarik",
+        "created": "2022-04-21T14:19:51.764",
+        "updated": "2022-04-21T14:19:51.764"
+    }
+},
+{
+    "model": "location.commune",
+    "pk": 2,
+    "fields": {
+        "wilaya": 1,
+        "name": "Birtouta",
+        "created": "2022-04-21T14:19:58.245",
+        "updated": "2022-04-21T14:19:58.245"
+    }
+},
+{
+    "model": "location.commune",
+    "pk": 3,
+    "fields": {
+        "wilaya": 1,
+        "name": "Blida",
+        "created": "2022-04-21T14:20:03.945",
+        "updated": "2022-04-21T14:20:03.945"
+    }
+},
+{
+    "model": "location.commune",
+    "pk": 4,
+    "fields": {
+        "wilaya": 1,
+        "name": "Beni tamou",
+        "created": "2022-04-21T14:20:08.808",
+        "updated": "2022-04-21T14:20:08.808"
+    }
+}
+]

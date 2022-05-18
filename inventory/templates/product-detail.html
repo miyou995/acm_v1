@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}
+<title>Produit</title>
+{% endblock %}
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">
+          Produit
+        </h3>
+    </div> 
+    <div class="col-md-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-0">{{product.name}}</h4>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-inline-block pt-3">
+                      
+                            <p >code article : {{product.upc}}</p> 
+                            <p >Référence / code a bar : {{product.reference}}</p>
+                            <p >Catégorie  : {{product.category}}</p>
+                            <p >Marque : {{product.brand}}</p>
+                            <p >Notes: {{product.text}} </p>
+                    </div>
+                    <div class="d-inline-block">
+                        <p >actif :  {{product.actif}}</p>
+                        <p >Nouveau : {{product.new}}</p>
+                        <p >Prix : {{product.price}}</p>
+                        <p >Ancien prix : {{product.old_price}}</p>
+                        <p >Prix d'achat : {{product.buy_price}}</p>                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <div class="col-md-12 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-0">Total</h4>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-inline-block pt-3">
+                        <div class="d-md-flex">
+                            <h2 class="mb-0">{{ product_count }} </h2>
+                            
+                        </div>
+                    </div>
+                    <div class="d-inline-block">
+                        <i class=" fas  fa-cubes text-info icon-lg"></i>                                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <div class="row">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-md-flex justify-content-between align-items-center">
+                        <tr class="row">
+                            <td >
+                                <input type="text" class="form-control"  placeholder="Intitulé"></td>
+                            <td >
+                                <select class="form-control"  name="wilaya" id="id_wilaya"> 
+                                {% for wilaya in wilayas %}
+                                    <option  value="{{wilaya.id}}">{{wilaya.name}}</option>
+                                {% endfor %}
+                                </select>
+                            </td>
+                            <td >
+                                <select class="form-control"  name="commune" id="id_commune"> 
+                                {% for commune in communes %}
+                                    <option value="{{commune.id}}">{{commune.name}}</option>
+                                {% endfor %}
+                                </select>
+                            </td>
+                            
+                            <td >
+                                <button type="submit" class="btn btn-primary mr-2"> <i class="fas fa-filter"></i></button>
+                            </td>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Dépots</h4>
+          <div class="row">
+            <div class="col-12">
+              <div class="table-responsive">
+                <div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                    <div class="row">
+                
+                            
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="order-listing" class="table dataTable no-footer" role="grid" aria-describedby="order-listing_info">
+                                        <thead>
+                                            <tr role="row">
+                                                <th style="width:400px;">Dépots </th>
+                                                <th style="width:400px;" >Address</th>
+                                                <th style="width:400px;" >Quantité</th>
+                                                <th style="width:400px;"></th> 
+                                                <th >Actions</th></tr>
+                                        </thead>
+                                        <tbody> 
+                                            {% for warehouseitem in instanceproduit  %}
+                                        <tr role="row" class="odd">
+                                                <td > {{warehouseitem.location.name}} </td>
+                                                <td>{{warehouseitem.location.address}}</td>
+                                                <td>{{warehouseitem.quantity}}</td>
+                                                <td></td>
+                                                <td>
+                                                <a href="{% url 'inventory:warehousedetail' warehouseitem.pk %}">
+                                                <button class="btn btn-outline-primary">Voir</button></a>
+                                                </td>
+                                            </tr>    
+                                        {% endfor %}
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-5">
+                                                <div class="dataTables_info" id="order-listing_info" role="status" aria-live="polite">Showing 1 to 10 of 10 entries</div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-7">
+                                                <div class="dataTables_paginate paging_simple_numbers" id="order-listing_paginate">
+                                                    <ul class="pagination">
+                                                        <li class="paginate_button page-item previous disabled" id="order-listing_previous">
+                                                            <a href="#" aria-controls="order-listing" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item active"><a href="#" aria-controls="order-listing" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                                        <li class="paginate_button page-item next disabled" id="order-listing_next"><a href="#" aria-controls="order-listing" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+
+    <!-- main-panel ends -->
+</div>
+
+{% endblock content %}

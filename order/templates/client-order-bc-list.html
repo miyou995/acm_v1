@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}
+<title>Commandes</title>
+{% endblock %}
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title">
+            Commandes client
+        </h3>
+    </div> 
+    <div class="col-md-6 grid-margin">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title mb-0">Total</h4>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-inline-block pt-3">
+                        <div class="d-md-flex">
+                            <h2 class="mb-0"> {{ warehouseorders.count }} </h2>
+                            
+                        </div>
+                    </div>
+                    <div class="d-inline-block">
+                        <i class=" fas fa-dolly-flatbed text-info icon-lg"></i>                                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="row">
+        <div class="col-12 grid-margin">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-md-flex justify-content-between align-items-center">
+                        <tr class="row">
+                            <td >
+                                <input type="text" class="form-control"  placeholder="recepteur"></td>
+                            <td >
+                                    <input type="date" class="form-control"  placeholder="date debut"></td>
+                            <td >
+                                <input type="date" class="form-control"  placeholder="date fin"></td>
+                            
+
+                            <td >
+                                <button type="submit" class="btn btn-primary mr-2"> <i class="fas fa-filter"></i></button>
+                            </td>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+        <a href="{% url 'order:create_client_order' %}"> <button type="submit" class="btn btn-primary mr-2" style="float:right;">+ Commande</button><a>
+          <h4 class="card-title">Liste des bons de commande</h4>
+          <div class="row">
+            <div class="col-12">
+              <div class="table-responsive">
+                <div id="order-listing_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer">
+                    <div class="row">
+                 
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table id="order-listing" class="table dataTable no-footer" role="grid" aria-describedby="order-listing_info">
+                                        <thead>
+                                            <tr role="row">
+                                                <th  style="width:400px;" >Recepteur </th>
+                                                <th  style="width:400px;" ></th>
+                                                <th  style="width:400px;" >Confirmé</th>
+                                                <th  style="width:200px;" ></th>
+                                                <th style="width:600px;">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody> 
+                                            {% for clientorder in clientorders %}
+                                        <tr role="row" class="odd">
+                                                <td>{{clientorder.last_name}} {{clientorder.last_name}}</td>
+                                                <td></td>
+                                                <td ><label class="badge badge-success">{{clientorder.is_confirmed}}</label></td>
+                                                <td></td>
+                                                <td>
+                                                <a href="{% url 'order:clientorder_detail' clientorder.pk %}">
+                                                <button class="btn btn-outline-primary">Voir</button></a>
+                                                <a href="{% url 'order:edit_client_order' %}">
+                                                <button class="btn btn-outline-primary">Modifier</button></a>
+                                                <a href="#">
+                                                    <button class="btn btn-outline-primary">Supprimer</button></a>
+                                                </td>
+                                            </tr>    
+                                        {% endfor %}
+                                        </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-5">
+                                                <div class="dataTables_info" id="order-listing_info" role="status" aria-live="polite">Showing 1 to 10 of 10 entries</div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-7">
+                                                <div class="dataTables_paginate paging_simple_numbers" id="order-listing_paginate">
+                                                    <ul class="pagination">
+                                                        <li class="paginate_button page-item previous disabled" id="order-listing_previous">
+                                                            <a href="#" aria-controls="order-listing" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                                                        </li>
+                                                        <li class="paginate_button page-item active"><a href="#" aria-controls="order-listing" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                                        <li class="paginate_button page-item next disabled" id="order-listing_next"><a href="#" aria-controls="order-listing" data-dt-idx="2" tabindex="0" class="page-link">Next</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+
+    <!-- main-panel ends -->
+</div>
+
+{% endblock content %}

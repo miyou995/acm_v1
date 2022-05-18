@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}
+<title>Dépots</title>
+{% endblock %}
+ 
+      <div class="content-wrapper">
+          <div class="page-header">
+              <h3 class="page-title">
+                Dépots
+              </h3>
+          </div>
+          <div class="col-12 grid-margin">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Ajout des produits dépots</h4>
+                <form action="{% url 'inventory:editwarehouseitem' warehouseitem.pk %}" method="post"  class="form-sample">
+                    {% csrf_token %}
+                  <p class="card-description">
+                  </p>
+                  <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="id_product">Produit :</label>
+                            <div class="col-sm-9">
+                                <input type="text" value="{{warehouseitem.product}}" name="product"  id="id_quantity" class="form-control">	                          
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="id_location">Dépots :</label>
+                            <div class="col-sm-9">
+                                <input type="text"  value="{{warehouseitem.location}}" name="location"  id="id_location" class="form-control">	
+                            </div>
+                        </div>
+                        </div>
+                 
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label" for="id_quantity">Quantité :</label>
+                                <div class="col-sm-9">
+                                    <input type="number" value="{{warehouseitem.quantity}}" name="quantity" value="0" step="1" required="" id="id_quantity" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+               
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                 </form>
+              </div>
+            </div>
+          
+          </div>
+
+        </div>
+    <!-- main-panel ends -->
+  </div>
+
+  {% endblock content %}

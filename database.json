@@ -1,0 +1,748 @@
+[
+{
+    "model": "inventory.brand",
+    "pk": 1,
+    "fields": {
+        "name": "brandt",
+        "actif": true
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 2,
+    "fields": {
+        "name": "samsung",
+        "actif": true
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 3,
+    "fields": {
+        "name": "telestar",
+        "actif": true
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 4,
+    "fields": {
+        "name": "oppo",
+        "actif": true
+    }
+},
+{
+    "model": "inventory.brand",
+    "pk": 5,
+    "fields": {
+        "name": "SEB",
+        "actif": true
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 1,
+    "fields": {
+        "name": "téléphonie",
+        "slug": "telephonie",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_DZB0FrR_8IP603R_xaiuGZl.png",
+        "parent": null,
+        "lft": 1,
+        "rght": 8,
+        "tree_id": 1,
+        "level": 0
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 2,
+    "fields": {
+        "name": "smartphone",
+        "slug": "smartphone",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_DZB0FrR.png",
+        "parent": 1,
+        "lft": 2,
+        "rght": 5,
+        "tree_id": 1,
+        "level": 1
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 3,
+    "fields": {
+        "name": "tablette",
+        "slug": "tablette",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_DZB0FrR_ZCQofoY.png",
+        "parent": 2,
+        "lft": 3,
+        "rght": 4,
+        "tree_id": 1,
+        "level": 2
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 4,
+    "fields": {
+        "name": "telephone GSM",
+        "slug": "telephone-gsm",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_H8AW4Lv.png",
+        "parent": 1,
+        "lft": 6,
+        "rght": 7,
+        "tree_id": 1,
+        "level": 1
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 5,
+    "fields": {
+        "name": "electromenager",
+        "slug": "electromenager",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_DZB0FrR_8IP603R.png",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 2,
+        "level": 0
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 6,
+    "fields": {
+        "name": "informatique",
+        "slug": "informatique",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_H8AW4Lv_caFaFZU.png",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 3,
+        "level": 0
+    }
+},
+{
+    "model": "inventory.category",
+    "pk": 7,
+    "fields": {
+        "name": "meubles",
+        "slug": "meubles",
+        "order": null,
+        "actif": true,
+        "icon": "images/categories/category-8_Tn4DMn8_HQSNc2u_H8AW4Lv_3HCe4p0.png",
+        "parent": null,
+        "lft": 1,
+        "rght": 2,
+        "tree_id": 4,
+        "level": 0
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 2,
+    "fields": {
+        "name": "machine é laver",
+        "upc": "123456",
+        "slug": "machine-a-laver",
+        "reference": "123456d",
+        "category": 2,
+        "brand": 2,
+        "text": "machine blanche",
+        "price": "50000",
+        "old_price": null,
+        "buy_price": "50000",
+        "actif": false,
+        "new": false,
+        "created": "2022-03-30T08:49:07.724Z",
+        "updated": "2022-04-10T12:11:14.893Z"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 4,
+    "fields": {
+        "name": "TV",
+        "upc": "6564162",
+        "slug": "tv",
+        "reference": "65641625151",
+        "category": 5,
+        "brand": 2,
+        "text": "silver",
+        "price": "80000",
+        "old_price": null,
+        "buy_price": "75000",
+        "actif": true,
+        "new": true,
+        "created": "2022-03-30T15:32:43.486Z",
+        "updated": "2022-04-03T15:00:29.797Z"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 5,
+    "fields": {
+        "name": "reno6",
+        "upc": "sm457855",
+        "slug": "reno6",
+        "reference": "sm457855j",
+        "category": 3,
+        "brand": 4,
+        "text": "bleu",
+        "price": "40000",
+        "old_price": null,
+        "buy_price": "35000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-03T12:19:14.150Z",
+        "updated": "2022-04-10T12:53:15.126Z"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 6,
+    "fields": {
+        "name": "lave vaisselle",
+        "upc": "1245879s",
+        "slug": "lave-vaisselle",
+        "reference": "25879631s",
+        "category": 5,
+        "brand": 2,
+        "text": "lave-vaisselle encastrable 60 cm",
+        "price": "80000",
+        "old_price": null,
+        "buy_price": "75000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T09:22:45.659Z",
+        "updated": "2022-04-10T09:22:45.753Z"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 7,
+    "fields": {
+        "name": "machine é café",
+        "upc": "zeadqda6984",
+        "slug": "machine-a-cafe",
+        "reference": "kjojc85qds",
+        "category": 5,
+        "brand": 2,
+        "text": "couleur rouge",
+        "price": "35000",
+        "old_price": null,
+        "buy_price": "30000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T10:16:05.037Z",
+        "updated": "2022-04-10T10:16:05.135Z"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 8,
+    "fields": {
+        "name": "A51",
+        "upc": "sqdqda45",
+        "slug": "a51",
+        "reference": "5zdada",
+        "category": 1,
+        "brand": 2,
+        "text": "couleur bleu",
+        "price": "80000",
+        "old_price": null,
+        "buy_price": "75000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T10:18:05.418Z",
+        "updated": "2022-04-10T10:18:05.517Z"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 9,
+    "fields": {
+        "name": "A50",
+        "upc": "nldzzeéfz57",
+        "slug": "a50",
+        "reference": "lknefkl55555",
+        "category": 1,
+        "brand": 2,
+        "text": "couleur blanc",
+        "price": "60000",
+        "old_price": null,
+        "buy_price": "55000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T10:21:58.387Z",
+        "updated": "2022-04-10T10:21:58.487Z"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 10,
+    "fields": {
+        "name": "A94",
+        "upc": "fnijr4545",
+        "slug": "a94",
+        "reference": "dfz484894",
+        "category": 2,
+        "brand": 4,
+        "text": "couleur vert",
+        "price": "70000",
+        "old_price": null,
+        "buy_price": "65000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T10:39:57.259Z",
+        "updated": "2022-04-10T10:39:57.344Z"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 11,
+    "fields": {
+        "name": "cuiseur vapeur",
+        "upc": "498415da",
+        "slug": "cuiseur-vapeur",
+        "reference": "56498498/74ds",
+        "category": 5,
+        "brand": 5,
+        "text": "couleur blanc",
+        "price": "80000",
+        "old_price": null,
+        "buy_price": "75000",
+        "actif": true,
+        "new": true,
+        "created": "2022-04-10T12:40:16.650Z",
+        "updated": "2022-04-10T12:40:16.699Z"
+    }
+},
+{
+    "model": "inventory.product",
+    "pk": 12,
+    "fields": {
+        "name": "test",
+        "upc": "151654",
+        "slug": "test",
+        "reference": null,
+        "category": null,
+        "brand": null,
+        "text": "",
+        "price": "0",
+        "old_price": null,
+        "buy_price": null,
+        "actif": true,
+        "new": false,
+        "created": "2022-04-21T13:10:23.560Z",
+        "updated": "2022-04-21T13:10:23.580Z"
+    }
+},
+{
+    "model": "inventory.warehouse",
+    "pk": 1,
+    "fields": {
+        "name": "Oued smar",
+        "address": "alger, alger",
+        "actif": true,
+        "is_default": true,
+        "commune": null,
+        "created": "2022-03-27T16:27:48.998Z",
+        "updated": "2022-04-03T12:19:50.615Z"
+    }
+},
+{
+    "model": "inventory.warehouse",
+    "pk": 2,
+    "fields": {
+        "name": "medea",
+        "address": "medea,medea",
+        "actif": true,
+        "is_default": false,
+        "commune": null,
+        "created": "2022-03-27T16:28:13.656Z",
+        "updated": "2022-03-27T17:55:13.434Z"
+    }
+},
+{
+    "model": "inventory.warehouse",
+    "pk": 4,
+    "fields": {
+        "name": "Djelfa",
+        "address": "djelfa, algerie",
+        "actif": false,
+        "is_default": false,
+        "commune": null,
+        "created": "2022-03-30T11:19:18.373Z",
+        "updated": "2022-03-30T11:19:18.373Z"
+    }
+},
+{
+    "model": "inventory.warehouse",
+    "pk": 5,
+    "fields": {
+        "name": "chlef",
+        "address": "chef,algerie",
+        "actif": false,
+        "is_default": false,
+        "commune": null,
+        "created": "2022-03-30T11:21:46.642Z",
+        "updated": "2022-04-03T12:19:44.111Z"
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 3,
+    "fields": {
+        "product": 2,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 4,
+    "fields": {
+        "product": 2,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 8,
+    "fields": {
+        "product": 4,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 9,
+    "fields": {
+        "product": 4,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 11,
+    "fields": {
+        "product": 4,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 12,
+    "fields": {
+        "product": 4,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 13,
+    "fields": {
+        "product": 5,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 14,
+    "fields": {
+        "product": 5,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 15,
+    "fields": {
+        "product": 5,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 16,
+    "fields": {
+        "product": 5,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 17,
+    "fields": {
+        "product": 6,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 18,
+    "fields": {
+        "product": 6,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 19,
+    "fields": {
+        "product": 6,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 20,
+    "fields": {
+        "product": 6,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 21,
+    "fields": {
+        "product": 7,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 22,
+    "fields": {
+        "product": 7,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 23,
+    "fields": {
+        "product": 7,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 24,
+    "fields": {
+        "product": 7,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 25,
+    "fields": {
+        "product": 8,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 26,
+    "fields": {
+        "product": 8,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 27,
+    "fields": {
+        "product": 8,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 28,
+    "fields": {
+        "product": 8,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 29,
+    "fields": {
+        "product": 9,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 30,
+    "fields": {
+        "product": 9,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 31,
+    "fields": {
+        "product": 9,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 32,
+    "fields": {
+        "product": 9,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 33,
+    "fields": {
+        "product": 10,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 34,
+    "fields": {
+        "product": 10,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 35,
+    "fields": {
+        "product": 10,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 36,
+    "fields": {
+        "product": 10,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 37,
+    "fields": {
+        "product": 11,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 38,
+    "fields": {
+        "product": 11,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 39,
+    "fields": {
+        "product": 11,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 40,
+    "fields": {
+        "product": 11,
+        "quantity": "0",
+        "location": 5
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 41,
+    "fields": {
+        "product": 12,
+        "quantity": "0",
+        "location": 1
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 42,
+    "fields": {
+        "product": 12,
+        "quantity": "0",
+        "location": 2
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 43,
+    "fields": {
+        "product": 12,
+        "quantity": "0",
+        "location": 4
+    }
+},
+{
+    "model": "inventory.warehouseitem",
+    "pk": 44,
+    "fields": {
+        "product": 12,
+        "quantity": "0",
+        "location": 5
+    }
+}
+]

@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}
+<title>Produit</title>
+{% endblock %}
+      <div class="content-wrapper">
+          <div class="page-header">
+              <h3 class="page-title">
+                Produit
+              </h3>
+          </div>
+          <div class="col-12 grid-margin">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Modification des catégories</h4>
+                <form action="{% url 'inventory:addcategory' %}"  method="post"  class="form-sample">
+                    {% csrf_token %}
+                  <p class="card-description">
+                  </p>
+                  <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="id_name">Intitulé :</label>
+                            <div class="col-sm-9">
+                            <input  type="text" name="name"  id="id_name"  required="" class="form-control">
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="id_upc">URL :</label>
+                            <div class="col-sm-9">
+                            <input type="text" name="slug" class="form-control " maxlength="150" required="" id="id_slug">
+                            </div>
+                        </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                <label class="col-sm-3 col-form-label" for="id_icon">Icone :</label>
+                                <div class="input-group col-sm-9">
+                                    <input type="text" class="form-control file-upload-info"  name="icon" id= "id_icon" disabled="" placeholder="Upload Image">
+                                    <span class="input-group-append">
+                                      <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                                    </span>
+                                </div>
+                                
+                            </div>
+                            </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">	
+                              <label class="col-sm-3 col-form-label" for="id_category">Parent :</label>
+                              <div class="col-sm-9">
+                                    <select class="form-control"  name="parent" id="id_parent"> 
+                                    {% for category in categorys %}
+                                        <option value="{{category.id}}">{{category.name}}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                            </div>
+                        <div class="col-md-6">
+                            <div class="form-group row">
+                                  <div class="col-sm-4">
+                                      <div class="form-check form-check-primary">
+                                          <label class="form-check-label" for="id_actif">
+                                           Actif 
+                                            <input type="checkbox" class="form-check-input" checked="" name="actif" id="id_actif" > 
+                                          <i class="input-helper"></i></label>
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+                  </div>
+                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <a href="#">
+                          <button class="btn btn-outline-primary">Supprimer</button></a>
+                </form>
+              </div>
+            </div>
+          
+          </div> 
+
+          <div>
+            
+        </div>
+    <!-- main-panel ends -->
+  </div>
+ 
+  {% endblock content %}

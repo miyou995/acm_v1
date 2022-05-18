@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% load static %}
+{% load mptt_tags %}
+{% block content %}
+{% block title %}
+<title>Produit</title>
+{% endblock %}
+ 
+      <div class="content-wrapper">
+          <div class="page-header">
+              <h3 class="page-title">
+                Produit
+              </h3>
+          </div>
+          <div class="col-12 grid-margin">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Ajout d'un produit</h4>
+                <form action="{% url 'inventory:addproduct' %}" method="post"  class="form-sample">
+                    {% csrf_token %}
+                  <p class="card-description">
+                   
+                  </p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="id_name">Intitulé</label>
+                        <div class="col-sm-9">
+                          <input  type="text" name="name"  id="id_name"  required="" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="id_upc">Code article:</label>
+                        <div class="col-sm-9">
+                          <input type="text" name="upc"  id="id_upc" required="" maxlength="200" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="id_reference">Référence / code a bar:</label>
+                        <div class="col-sm-9">
+                        <input type="text" name="reference"   id="id_reference" required=""  maxlength="200" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" for="id_slug">URL:</label>
+                          <div class="col-sm-9">
+                          <input type="text" name="slug"  required=""  maxlength="200" maxlength="150" id="id_slug" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row">	
+                        <label class="col-sm-3 col-form-label" for="id_brand">Marque :</label>
+                        <div class="col-sm-9">
+                          <select class="form-control"  name="brand" id="id_brand"> 
+                            {% for brand in brands %}
+                                <option value="{{brand.id}}">{{brand.name}}</option>
+                            {% endfor %}
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                     
+                    <div class="col-md-6">
+                      <div class="form-group row">	
+                        <label class="col-sm-3 col-form-label" for="id_category">Catégorie :</label>
+                        <div class="col-sm-9">
+                          <select class="form-control"  name="category" id="id_category"> 
+                            <option value="{{category.id}}">Selectionner une catégorie</option>
+                            {% comment %} {% full_tree_for_model inventory.Category as categories %} {% endcomment %}
+                            {% recursetree categories %}
+                              <option value="{{node.id}}">{{node.name}}</option>
+                              {% if not node.is_leaf_node %}
+                                {% for child in node.children.all %}
+                                  <option value="{{node.id}}">----{{ child.name }}</option>
+                                {% endfor %}
+                              {% endif %}
+                            {% endrecursetree %}
+                            {% comment %} {% for categorie in categoriss %}
+                            {% endfor %} {% endcomment %}
+
+                            {% comment %} {% for category in categorys %}
+                                <option value="{{category.id}}">{{category.name}}</option>
+                            {% endfor %} {% endcomment %}
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                   
+                    <div class="col-md-6">
+                      <div class="form-group row">
+                            <div class="col-sm-4">
+                                <div class="form-check form-check-primary">
+                                    <label class="form-check-label" for="id_actif">
+                                     Actif 
+                                      <input type="checkbox" class="form-check-input" checked="" name="actif" id="id_actif" > 
+                                    <i class="input-helper"></i></label>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-check form-check-primary">
+                                    <label class="form-check-label" for="id_new">
+                                        Nouveau 
+                                      <input type="checkbox" class="form-check-input" checked="" name="new" id="id_new" > 
+                                    <i class="input-helper"></i></label>
+                                </div>
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="card-description">
+                    
+                  </p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group row"> 
+                        <label class="col-sm-3 col-form-label" class="required" for="id_price">Prix:</label>
+                        <div class="col-sm-9">
+                          <input type="number" name="price" value="0" step="1" required="" id="id_price" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label" for="id_buy_price">Prix d'achat:</label>
+                          <div class="col-sm-9">
+                            <input type="number" name="buy_price"  step="1" required="" id="id_buy_price" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  {% comment %} <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row"> 
+                          <label class="col-sm-3 col-form-label" class="required" for="id_old_price">Ancien prix:</label>
+                          <div class="col-sm-9">
+                            <input type="number" name="old_price" value="0" step="1" required="" id="id_old_price" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                  </div> {% endcomment %}
+                  <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label">Notes :</label>
+                            <div class="col-sm-9">
+                            <textarea class="form-control" id="id_text" name="text" cols="40" rows="10"></textarea>
+                            </div>
+                        </div>
+                        </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                </form>
+              </div>
+            </div>
+          
+          </div>
+
+
+      
+      
+      
+      
+      
+        </div>
+    <!-- main-panel ends -->
+  </div>
+
+  {% endblock content %}

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}
+<title>Produits</title>
+{% endblock %}
+<!-- Main Wrapper -->
+<div class="main-wrapper">
+<!-- Page Wrapper -->
+<div class="page-wrapper bg-white">
+    <div class="content container-fluid bg-white">
+    
+        <!-- Page Header -->
+        <div class="page-header bg-white">
+            <div class="row bg-white">
+                <div class="col-sm-12 bg-white">
+                    <h3 class="page-title  bg-white">Produits</h3>
+                </div>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-sm-12">
+                    <!-- Project Settings Form -->
+                    <form action="{% url 'order:addcommune' %}" method="post">
+                        {% csrf_token %}
+                        <div class="row form-row">
+                            <div class="col-12 col-md-12">
+                                <div class="form-group">
+                                   
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group ">
+                                    <label for="id_wilaya">Wilaya : </label>
+                                        <select class="form-control "  name="wilaya" id="id_wilaya"> 
+                                            {% for wilaya in wilayas %}
+                                                <option value="{{wilaya.id}}">{{wilaya.name}}</option>
+                                            {% endfor %}													
+                                        </select>	
+                                </div>    
+                            </div>            
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group ">
+                                <label for="id_name">Nom:</label>
+                                <input type="text" name="name" class="form-control " maxlength="30" required="" id="id_name">
+                            </div>
+                        </div>
+                                                  
+                        </div>           
+                        <br>  <br>
+                        <div> 
+                             <input type="submit" value="Save" class="btnn" name="_save">
+                        </div>
+                        <br>  <br>
+                    </form>
+                    <!-- /Poject Settings Form -->
+                  
+            </div>			
+        </div>
+        
+    </div>			
+</div>
+<br>
+<!-- /Page Wrapper -->
+
+</div>
+
+<!-- /Main Wrapper -->
+{% endblock content %}

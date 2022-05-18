@@ -1,0 +1,146 @@
+{% load static %}
+
+
+
+    <div class="container-fluid page-body-wrapper">
+
+          <!-- partial:../../partials/_settings-panel.html -->
+          <div class="theme-setting-wrapper">
+            <div id="settings-trigger"><i class="fas fa-fill-drip"></i></div>
+            <div id="theme-settings" class="settings-panel">
+              <i class="settings-close fa fa-times"></i>
+              <p class="settings-heading">SIDEBAR SKINS</p>
+              <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+              <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+              <p class="settings-heading mt-2">HEADER SKINS</p>
+              <div class="color-tiles mx-0 px-4">
+                <div class="tiles primary"></div>
+                <div class="tiles success"></div>
+                <div class="tiles warning"></div>
+                <div class="tiles danger"></div>
+                <div class="tiles info"></div>
+                <div class="tiles dark"></div>
+                <div class="tiles default"></div>
+              </div>
+            </div>
+          </div>
+
+     <!-- partial:../../partials/_sidebar.html -->
+     <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="profile-image">
+                <img  src="{{user.display_picture}}" alt="image"/>
+              </div>
+              <div class="profile-name">
+                <p class="name">
+                  {{ user.get_username }}
+                </p>
+                <p class="designation">
+                  
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/" >
+              <i class="fa fa-home menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#editors" aria-expanded="false" aria-controls="editors">
+              <i class="fas fa-chart-line menu-icon"></i>
+              <span class="menu-title">Analytics</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="editors">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="{% url 'inventory:productanalytics' %}">Produits</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'inventory:warehouseanalytics' %}">Dépots</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="fas fa-boxes menu-icon"></i>
+              <span class="menu-title">Produits</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'inventory:productlist' %}">Liste des produits</a></li>
+              </ul>
+              </div>
+          </li>
+          <li class="nav-item"> 
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="fas fa-warehouse menu-icon"></i>
+              <span class="menu-title">Dépots</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'inventory:warehouselist' %}">Liste des dépots</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="fas fa-dolly-flatbed menu-icon"></i>
+              <span class="menu-title">Commandes interne</span> 
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'order:warehouse_order_bc_list' %}">Bon de commande</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'order:warehouse_order_ff_list' %}">Facture finale</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'order:warehouse_order_bl_list' %}">Bon de livraison</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-advanced" aria-expanded="false" aria-controls="ui-advanced">
+              <i class="fas fa-solid fa-cart-plus menu-icon"></i>
+              <span class="menu-title">Commandes fournisseur</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-advanced">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'order:supplier_order_bc_list' %}">Bon de commande</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'order:supplier_order_br_list' %}">Bon de récéption</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="fas fa-solid fa-cart-plus menu-icon"></i>
+              <span class="menu-title">Commandes client</span> <i class="fa-solid fa-cart-arrow-up"></i>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'order:client_order_bc_list' %}">Bon de commande</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'order:client_order_ff_list' %}">Facture finale</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{% url 'order:client_order_bl_list' %}">Bon de livraison</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#maps" aria-expanded="false" aria-controls="maps">
+              <i class="fas fa-truck menu-icon"></i>
+              <span class="menu-title">Livraisons</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="maps">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'order:delivery_list' %}">Liste des livraison</a></li>
+              </ul>
+            </div>
+          </li>
+          
+        </ul>
+      </nav>
+      <!-- partial -->
+

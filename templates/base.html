@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% block title %}
+<title>base</title>
+{% endblock %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Stock</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'vendors/iconfonts/font-awesome/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.base.css' %}">
+  <link rel="stylesheet" href="{% static 'vendors/css/vendor.bundle.addons.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
+</head>
+{% include 'navbar.html' %}
+{% include 'sidebar.html' %}
+
+<body>
+            {%block scripts%}
+            {%endblock scripts%}
+            {% block content %}
+            
+            {% endblock content %}
+
+  <!-- plugins:js -->
+  <script src="{% static 'vendors/js/vendor.bundle.base.js' %}"></script>
+  <script src="{% static 'vendors/js/vendor.bundle.addons.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+
+  <!-- inject:js -->
+  <script src="{% static 'vendors/js/off-canvas.js' %}"></script>
+  <script src="{% static 'vendors/js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'vendors/js/misc.js' %}"></script>
+  <script src="{% static 'vendors/js/settings.js' %}"></script>
+  <script src="{% static 'vendors/js/todolist.js' %}"></script>
+  <script src="{% static 'vendors/js/formpickers.js' %}"></script>
+  <script src="{% static 'vendors/js/form-addons.js' %}"></script>
+  <script src="{% static 'vendors/js/x-editable.js' %}"></script>
+  <script src="{% static 'vendors/js/dropify.js' %}"></script>
+  <script src="{% static 'vendors/js/dropzone.js' %}"></script>
+  <script src="{% static 'vendors/js/jquery-file-upload.js' %}"></script>
+  <script src="{% static 'vendors/js/formpickers.js' %}"></script>
+  <script src="{% static 'vendors/js/form-repeater.js' %}"></script>
+  <script src="{% static 'vendors/js/chart.js' %}"></script>
+  <script src="{% static 'vendors/js/dashboard.js' %}"></script>
+  <!-- End custom js for this page-->
+{% block extrasj %}
+
+{% endblock extrasj %}
+
+ <!-- Vendor JS Files -->
+ {% comment %} <script src="assets/vendor/aos/aos.js"></script>
+ <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+ <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+ <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+ <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+ <script src="assets/vendor/php-email-form/validate.js"></script> {% endcomment %}
+
+ <!-- Template Main JS File -->
+ <script src="{% static 'js/main.js' %}"></script>
+ <script src="https://unpkg.com/htmx.org@1.5.0" ></script>
+ <!-- <script type="text/javascript" src="{% static "js/site-base.js" %}"></script> -->
+ <!-- <script type="text/javascript" src="{% static "CACHE/js/awesome.8dd1a2872443.js" %}" charset="utf-8"></script> -->
+ <script>
+     document.body.addEventListener('htmx:configRequest', (event) => {
+         event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+     })
+ </script>
+</body>
+
+
+</html>
